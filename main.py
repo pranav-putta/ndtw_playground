@@ -87,6 +87,8 @@ class NDTWPlayground(object):
 
             self.__line[0].set_data(*list(zip(*ap1)))
             self.__line[1].set_data(*list(zip(*ap2)))
+            self.show_ndtw()
+            self._figure.canvas.draw()
             print(ndtw)
         elif event.key == 'tab':
             self._selected_plot = (self._selected_plot + 1) % 2
